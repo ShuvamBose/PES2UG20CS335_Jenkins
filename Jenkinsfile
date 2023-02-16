@@ -4,22 +4,27 @@ pipeline {
         stage('Build') {
             steps {
                 sh "g++ PES2UG20CS335-1.cpp"
-                echo "Build successfully."
+                echo "Build- successfully."
             }
         }
         stage('Test') {
             steps {
-                sh "a.exe"
-              echo "Test successfully."
+                sh "./a"
+              echo "Test- successfully."
             }
+        }
+         stage('Deploy') {
+            
+             sh ''
+             echo 'Deploy- successfully.'
         }
     }
     post {
         always {
-            echo "Pipeline completed successfully."
+            echo "Pipe-line completed successfully."
         }
         failure {
-            echo "Pipeline failed !!"
+            echo "Pipe-line failed !!"
         }
     }
 }

@@ -13,8 +13,10 @@ pipeline {
                 echo "Test- successfully."
             }
         }
-         stage('Deploy') {
+        stage('Deploy') {
+            steps {
                 echo 'Deploy- successfully.'
+            }
         }
     }
     post {
